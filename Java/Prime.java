@@ -11,13 +11,14 @@ public class Prime {
             System.out.println("Not Prime ");
     }
 
-    public static boolean isPrime(int n) {
+    public static boolean IsPrime(int n) {
         if (n <= 1)
             return false;
         int c = 2;
-        while (c * c <= n) {
-            if (c % 2 == 0)
+        if (c * c <= n) {
+            if (n % c == 0)
                 return false;
+            c++;
         }
         return true;
     }
