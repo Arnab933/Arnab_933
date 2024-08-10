@@ -15,7 +15,7 @@ public class Prime {
         if (n <= 1)
             return false;
         int c = 2;
-        if (c * c <= n) {
+        while (c * c <= n) {
             if (n % c == 0)
                 return false;
             c++;
